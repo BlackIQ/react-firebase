@@ -1,4 +1,4 @@
-![Index](public/images/reactfire.png)
+<img src="public/images/reactfire.png" style="width: 100%" />
 
 # React + Firebase
 
