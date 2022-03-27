@@ -1,8 +1,8 @@
-import {FaGoogle} from "react-icons/fa";
+import {FaGoogle, FaUserSecret} from "react-icons/fa";
 import {Link, useHistory} from "react-router-dom";
 import {useState, useEffect} from "react";
 
-import {auth, loginWithEmailPassword, signInWithGoogle} from "../firebase/firebase";
+import {auth, loginWithEmailPassword, anonLogin, signInWithGoogle} from "../firebase/firebase";
 import {useAuthState} from "react-firebase-hooks/auth";
 
 const Login = () => {
@@ -47,6 +47,13 @@ const Login = () => {
                         <h4 className='text-danger'>Or login with Google</h4>
                         <p>You can use your Google account to login too.</p>
                         <button onClick={() => signInWithGoogle()} className='btn btn-danger w-100'><FaGoogle className='float-start' /><span className='float-end'>Sign in with Google</span></button>
+                        <br />
+                        <br />
+                        <hr />
+                        <br />
+                        <h4 className='text-dark'>Or login anonymously</h4>
+                        <p>You can use no account or email or password to login too.</p>
+                        <button onClick={() => anonLogin()} className='btn btn-dark w-100'><FaUserSecret className='float-start' /><span className='float-end'>Sign in Anonymously</span></button>
                     </div>
                 </div>
             </div>
