@@ -16,13 +16,13 @@ This is a sample to use **Firebase Authentication** methods like:
 ### Take a look
 
 Here is the login page:
-![Login](public/images/firereact-login.png)
+![Login](public/images/rf-login.png)
 
 Here is the register page:
-![Register](public/images/reactfire-register.png)
+![Register](public/images/rf-register.png)
 
 Here is the reset password page:
-![Reset](public/images/reacrfire-reset.png)
+![Reset](public/images/rf-reset.png)
 
 And last is home:
-![Home](public/images/reacrfire-home.png)
+![Home](public/images/rf-home.png)
