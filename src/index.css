@@ -3,3 +3,6 @@
 body {
   font-family: 'Quicksand', sans-serif !important;
 }
+.pointer {
+  cursor: pointer;
+}
