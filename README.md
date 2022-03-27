@@ -9,6 +9,7 @@ This is a practical project where we learned how to use **Firebase** as back-end
 This is a sample to use **Firebase Authentication** methods like:
 
 - Authenticate with Email & Password
+- Authenticate Anonymously
 - Create account with Email & Password
 - Authenticate with Google account
 - Use reset password method
