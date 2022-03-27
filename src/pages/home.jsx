@@ -15,10 +15,11 @@ const Home = () => {
         if (!user) history.push('/login');
     }, [user, loading])
 
+    if (!user) return null;
+
     return (
         <div>
-            <h1>Welcome</h1>
-            <br />
+            <h1>Welcome {user.displayName ? <b>{user.displayName}</b> : <i>No name</i>}</h1>
         </div>
     );
 }
