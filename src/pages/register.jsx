@@ -9,7 +9,6 @@ const Register = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
 
     const [user, loading, error] = useAuthState(auth);
 
@@ -30,16 +29,13 @@ const Register = () => {
                         <h4 className='text-info'>Register with Email</h4>
                         <p>Create a new account with your Email and password</p>
                         <div>
-                            <label className='form-label' htmlFor='name'>Name</label>
-                            <input placeholder='Name' className='form-control' type='text' id='name' onChange={e => setName(e.target.value)}/>
-                            <br />
                             <label className='form-label' htmlFor='email'>Email</label>
                             <input placeholder='Email' className='form-control' type='email' id='email' onChange={e => setEmail(e.target.value)}/>
                             <br />
                             <label className='form-label' htmlFor='password'>Password</label>
                             <input placeholder='Password' className='form-control' type='password' id='password' onChange={e => setPassword(e.target.value)}/>
                             <br />
-                            <button onClick={() => registerEmailPassword(name, email, password)} className='btn btn-info w-100'>Register</button>
+                            <button onClick={() => registerEmailPassword(email, password)} className='btn btn-info w-100'>Register</button>
                         </div>
                         <br />
                         <p>If you have an account, <Link to='/login' className='text-info'>login now</Link></p>
