@@ -17,7 +17,7 @@ const Home = () => {
 
     return (
         <div>
-            <h1>Welcome <b>{user.displayName}</b> <button onClick={() => logout()} className='btn btn-danger float-end'>Logout</button></h1>
+            <h1>Welcome <button onClick={() => logout()} className='btn btn-danger float-end'>Logout</button></h1>
             <br />
         </div>
     );
