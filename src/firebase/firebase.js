@@ -48,18 +48,16 @@ const anonLogin = async () => {
 
 const signInWithGoogle = async () => {
     try {
-        const response = await signInWithPopup(auth, googleProvider);
-        const user = response.user;
+        await signInWithPopup(auth, googleProvider);
     } catch (error) {
         console.error(error);
         alert(error.message);
     }
 }
 
-const registerEmailPassword = async (name, email, password) => {
+const registerEmailPassword = async (email, password) => {
     try {
-        const response = await createUserWithEmailAndPassword(auth, email, password);
-        const user = response.user;
+        await createUserWithEmailAndPassword(auth, email, password);
     } catch (error) {
         console.error(error);
         alert(error.message);
