@@ -7,6 +7,7 @@ import {
     getAuth,
     signInWithPopup,
     signInWithEmailAndPassword,
+    signInAnonymously,
     createUserWithEmailAndPassword,
     sendPasswordResetEmail,
     signOut,
@@ -30,6 +31,15 @@ const analytics = getAnalytics(app)
 const loginWithEmailPassword = async (email, password) => {
     try {
         await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+        console.error(error);
+        alert(error.message);
+    }
+}
+
+const anonLogin = async () => {
+    try {
+        await signInAnonymously(auth);
     } catch (error) {
         console.error(error);
         alert(error.message);
@@ -74,6 +84,7 @@ export {
     auth,
     signInWithGoogle,
     loginWithEmailPassword,
+    anonLogin,
     registerEmailPassword,
     sendPasswordReset,
     logout,
