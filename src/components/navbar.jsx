@@ -15,7 +15,7 @@ const Navbar = () => {
         if (!user) {
             setNavItem(<Link className='text-primary' to='/login'>Login</Link>);
         } else {
-            setNavItem(<span className='pointer' onClick={() => logout()}>Logout</span>);
+            setNavItem(<span className='text-primary pointer' onClick={() => logout()}>Logout</span>);
         }
     }, [user, loading])
 
